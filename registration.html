@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form whose data display in same page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        body{
+            background-color: #b3a4a4;
+        }
+
+        h1{
+            text-align: center;
+            margin-bottom: 1em;
+        }
+
+        .container{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2em;
+        }
+
+        .registrationContainer{
+            font-weight: 700;
+            justify-self: center;
+            width: auto;
+            height: auto;
+            padding: 1em;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1em;
+
+            font-size: 20px;
+            background-color: #b6b5b2;
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), radial-gradient(at 50% 0%, rgba(255, 255, 255, 0.10) 0%, rgba(0, 0, 0, 0.50) 50%);
+            background-blend-mode: soft-light, screen; 
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        }
+
+        .submit{
+            border: 0;
+            line-height: 2.5;
+            padding: 0 20px;
+            font-size: 1rem;
+            text-align: center;
+
+            color: #fff;
+            text-shadow: 1px 1px 1px #000;
+            border-radius: 10px;
+            background-color: rgb(6, 67, 102);
+            box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+            width: 160px;
+            height: 40px;
+            position: relative;
+            top: 11px;
+            display: flexbox;
+        }
+        
+        .submit:hover{
+             background-color: rgb(8, 64, 97);
+        }
+
+        .btn2 {
+            border: 0;
+            line-height: 2.5;
+            padding: 0 20px;
+            font-size: 1rem;
+            text-align: center;
+            color: #fff;
+            text-shadow: 1px 1px 1px #000;
+            border-radius: 10px;
+            background-color: rgb(235, 21, 21);
+            box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+            width: 150px;
+            height: 40px;
+            /* margin-left: 240px;  */
+            float: left;
+            display: flexbox;
+            position: relative;
+            left: 245px;
+            bottom: 48px;
+        }
+
+        .btn2:hover {
+             background-color: rgb(78, 4, 4);
+        }
+
+        .registrationContainer input {
+            padding: 0.5em;
+            outline: none;
+            font-weight: 700;
+        }
+
+        .output {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0.5em;
+            justify-items: center;
+        }
+
+        .addData {
+            text-align: center;
+            width: 70%;
+            height: auto;
+            padding: 1em;
+            background-color: #DCD9D4;
+            background-image: linear-gradient(to bottom, rgba(123, 118, 118, 0.5) 0%, rgba(0, 0, 0, 0.50) 100%), radial-gradient(at 50% 0%, rgba(255, 255, 255, 0.10) 0%, rgba(0, 0, 0, 0.50) 50%);
+            background-blend-mode: soft-light, screen;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        }
+
+        
+        .output .addData img {
+            width: 150px;
+            height: 150px;
+
+        }
+
+        @media all and (max-width:900px) {
+            .output {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0.5em;
+                justify-items: center;
+
+            }
+        }
+
+        @media all and (max-width:400px) {
+            .container {
+                padding: 0.4em;
+            }
+
+            .registrationcontainer {
+                padding: 0.5em;
+            }
+
+            .output {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 0.5em;
+                justify-items: center;
+            }
+        }
+
+
+        .filled{
+            border-radius: 6px;
+            border: #000000;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="background-color:rgb(56, 119, 119); height:50px; color: black; font-weight: bold; font-size: 180%; text-shadow: white;">Student Registration Form</h1>
+
+    <div class="container">
+        <div class="registrationContainer">
+            <div class="name">
+                <label>Name</label> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                <input type="text" class="filled" id="name" name="name" placeholder="Enter your name">
+            </div>
+            <br>
+            <div class="email">
+                <label>Email</label> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                <input type="email" class="filled" id="email" name="Email" placeholder="Enter your Email Id">
+            </div>
+            <br>
+            <div class="websitelink">
+                <label>Website</label> &nbsp &nbsp &nbsp &nbsp &nbsp
+                <input type="text" class="filled" id="websitelink" name="WebsiteLink" placeholder="Enter your Website Link">
+            </div>
+            <br>
+            <div class="img">
+                <label>Image link</label> &nbsp &nbsp &nbsp
+                <input type="text" class="filled" id="img" name="img" placeholder="Enter URL">
+            </div>
+            <p>
+                Gender &nbsp &nbsp &nbsp &nbsp &nbsp
+                <label><input type="radio" name="gender" value="male">Male</label>
+                <br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                <label><input type="radio" name="gender" value="female">Female</label>
+                <br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                <label><input type="radio" name="gender" value="other">Other</label>
+            </p>
+            <p>
+                <div class="skills" id="skills">
+                    Skills &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    <input type="checkbox" name="ski" value="html">HTML &nbsp &nbsp &nbsp
+                    <input type="checkbox" name="ski" value="css">CSS &nbsp &nbsp &nbsp
+                    <input type="checkbox" name="ski" value="java">JAVA SCRIPT
+                </div>
+            </p>
+            <div class="pass">
+                <label>Password</label> &nbsp &nbsp &nbsp &nbsp
+                <input type="password" class="filled" id="pass" name="pass" placeholder="Enter your Password">
+            </div>
+            <br>
+            
+            <button class="submit" type="button">Submit Now</button>
+            <button class="btn2" type="button">Clear Now</button>
+
+            <div class="output">
+                <!-- Data stored dynamically inside the container -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let submit = document.querySelector(".submit");
+
+        submit.addEventListener('click', () => {
+
+            var output = document.querySelector(".output");
+            console.log(output);
+            let imageurl = document.querySelector("#img").value;
+            var generatedurl = `https://drive.google.com/uc?export=view&id=${imageurl}`;
+            //console.log(generatedurl);
+
+
+
+            //storing the data in objects getting from form
+            const data = {
+            name: document.getElementById("name").value,
+            img: generatedurl,
+            email: document.getElementById("email").value,
+            websitelink: document.getElementById("websitelink").value,
+            skills: document.getElementById("skills").checked = true
+
+        };
+        console.log(data);
+
+        //Card Template
+        let newlist = document.createElement('div');
+        newlist.classList.add('addData');
+        newlist.innerHTML = `
+            <img src="${generatedurl}" alt="image">
+            <div class="NameContainer">${data.name}</div>
+            <a href="mailto:prabhatmdi8953@gmail.com>${data.email}</a><br>
+            <a href="www.coddyculture.com">${data.websitelink}</a>
+            <div class="SkillContainer">${data.skills}</div>
+        `
+        console.log(newlist);
+        //adding the card one after the other
+        output.appendChild(newlist);
+
+        //clearing the input fields after submission
+        let input = document.querySelectorAll('input');
+            input.forEach(input => {
+                input.value = '';
+            });
+
+        })
+    </script>
+</body>
+</html>
